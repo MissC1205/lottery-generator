@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本设置 - 龙南彩艺</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <h1>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            基本设置
+        </h1>
+        <div><a href="/admin">返回后台</a></div>
+    </header>
+
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <ul>
+                <li><a href="/admin">总览</a></li>
+                <li><a href="/admin/sliders">轮播图</a></li>
+                <li><a href="/admin/products">产品管理</a></li>
+                <li><a href="/admin/videos">视频管理</a></li>
+                <li><a href="/admin/cases">案例管理</a></li>
+                <li><a href="/admin/messages">留言管理</a></li>
+                <li><a href="/admin/settings" class="active">基本设置</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-card">
+                <h2>企业信息</h2>
+                <form id="settingsForm" class="admin-form">
+                    <div class="admin-form-group">
+                        <label>公司名称</label>
+                        <input type="text" name="companyName" placeholder="如：龙南彩艺装饰材料厂">
+                    </div>
+                    <div class="admin-form-group">
+                        <label>联系人</label>
+                        <input type="text" name="contactName" placeholder="如：李川">
+                    </div>
+                    <div class="admin-form-group">
+                        <label>联系电话</label>
+                        <input type="text" name="contactPhone" placeholder="如：13319481565">
+                    </div>
+                    <div class="admin-form-group">
+                        <label>公司地址</label>
+                        <input type="text" name="address" placeholder="如：龙南市">
+                    </div>
+                    <div class="admin-form-group">
+                        <label>关于我们标题</label>
+                        <input type="text" name="aboutTitle" placeholder="如：关于龙南彩艺">
+                    </div>
+                    <div class="admin-form-group">
+                        <label>关于我们描述 1</label>
+                        <textarea name="aboutDesc1" rows="3" placeholder="公司介绍..."></textarea>
+                    </div>
+                    <div class="admin-form-group">
+                        <label>关于我们描述 2</label>
+                        <textarea name="aboutDesc2" rows="3" placeholder="更多介绍..."></textarea>
+                    </div>
+                    <div class="admin-form-group">
+                        <label>关于我们统计数据</label>
+                        <div style="display:flex;gap:12px;">
+                            <input type="text" name="statsYears" placeholder="年经验" style="width:100px;" title="年经验">
+                            <input type="text" name="statsProjects" placeholder="合作用户" style="width:100px;" title="合作用户">
+                            <input type="text" name="statsCustomers" placeholder="品种齐全" style="width:100px;" title="品种齐全">
+                        </div>
+                        <small>三个数字，如: 10+ / 500+ / 1000+</small>
+                    </div>
+                    <div class="admin-form-group">
+                        <label>更换 Logo</label>
+                        <input type="file" name="logo" accept="image/*">
+                        <small>建议尺寸 200×80 像素，支持 JPG/PNG</small>
+                    </div>
+                    <button type="submit" class="btn-primary">保存设置</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+    const TOKEN = localStorage.getItem('admin_token');
+    if (!TOKEN) window.location.href = '/admin/login';
+
+    function showToast(msg, type) {
+        const c = document.getElementById('tc') || (()=>{const d=document.createElement('div');d.className='toast-container';d.id='tc';document.body.appendChild(d);return d;})();
+        const t=document.createElement('div');t.className='toast '+type;t.textContent=msg;c.appendChild(t);
+        requestAnimationFrame(()=>t.classList.add('show'));
+        setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},3000);
+    }
+
+    async function loadSettings() {
+        try {
+            const res = await fetch('/api/settings');
+            const s = await res.json();
+            document.querySelector('[name=companyName]').value = s.companyName || '';
+            document.querySelector('[name=contactName]').value = s.contactName || '';
+            document.querySelector('[name=contactPhone]').value = s.contactPhone || '';
+            document.querySelector('[name=address]').value = s.address || '';
+            document.querySelector('[name=aboutTitle]').value = s.aboutTitle || '';
+            document.querySelector('[name=aboutDesc1]').value = s.aboutDesc1 || '';
+            document.querySelector('[name=aboutDesc2]').value = s.aboutDesc2 || '';
+            document.querySelector('[name=statsYears]').value = s.statsYears || '';
+            document.querySelector('[name=statsProjects]').value = s.statsProjects || '';
+            document.querySelector('[name=statsCustomers]').value = s.statsCustomers || '';
+        } catch(err) { showToast('加载设置失败', 'error'); }
+    }
+
+    document.getElementById('settingsForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const btn = e.target.querySelector('button');
+        btn.disabled = true; btn.textContent = '保存中...';
+
+        try {
+            const data = {
+                companyName: formData.get('companyName'),
+                contactName: formData.get('contactName'),
+                contactPhone: formData.get('contactPhone'),
+                address: formData.get('address'),
+                aboutTitle: formData.get('aboutTitle'),
+                aboutDesc1: formData.get('aboutDesc1'),
+                aboutDesc2: formData.get('aboutDesc2'),
+                statsYears: formData.get('statsYears'),
+                statsProjects: formData.get('statsProjects'),
+                statsCustomers: formData.get('statsCustomers')
+            };
+
+            // 有logo文件先上传
+            if (formData.get('logo').size > 0) {
+                const logoForm = new FormData();
+                logoForm.append('logo', formData.get('logo'));
+                const uploadRes = await fetch('/api/upload-logo', {
+                    method: 'POST',
+                    headers: { 'x-admin-token': TOKEN, 'x-requested-with': 'admin' },
+                    body: logoForm
+                });
+                if (!uploadRes.ok) throw new Error('Logo上传失败');
+            }
+
+            const res = await fetch('/api/settings', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'x-admin-token': TOKEN,
+                    'x-requested-with': 'admin'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (res.ok) { showToast('保存成功！页面将刷新', 'success'); setTimeout(()=>location.reload(), 1000); }
+            else { const d = await res.json(); if (d.needLogin) { window.location.href='/admin/login'; return; } showToast('保存失败', 'error'); }
+        } catch(err) { showToast(err.message || '保存失败', 'error'); }
+        finally { btn.disabled = false; btn.textContent = '保存设置'; }
+    });
+
+    loadSettings();
+    </script>
+</body>
+</html>

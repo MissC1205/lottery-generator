@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - 龙南彩艺装饰材料厂</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <h1>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            龙南彩艺管理后台
+        </h1>
+        <div>
+            <a href="/">返回网站</a>
+            <a href="/admin/login" onclick="localStorage.removeItem('admin_token');" style="color:#EF4444;">退出</a>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <aside class="admin-sidebar">
+            <ul>
+                <li><a href="/admin" class="active">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    总览
+                </a></li>
+                <li><a href="/admin/sliders">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    轮播图
+                </a></li>
+                <li><a href="/admin/products">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    产品管理
+                </a></li>
+                <li><a href="/admin/videos">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    视频管理
+                </a></li>
+                <li><a href="/admin/cases">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    案例管理
+                </a></li>
+                <li><a href="/admin/messages">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    留言管理
+                </a></li>
+                <li><a href="/admin/settings">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    基本设置
+                </a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <div class="admin-card">
+                <h2>数据概览</h2>
+                <div class="admin-stats">
+                    <div class="stat-card" style="background:linear-gradient(135deg, #667eea, #764ba2);">
+                        <div class="stat-number" id="sliderCount">-</div>
+                        <div class="stat-label">轮播图</div>
+                    </div>
+                    <div class="stat-card" style="background:linear-gradient(135deg, #f093fb, #f5576c);">
+                        <div class="stat-number" id="productCount">-</div>
+                        <div class="stat-label">产品数量</div>
+                    </div>
+                    <div class="stat-card" style="background:linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <div class="stat-number" id="videoCount">-</div>
+                        <div class="stat-label">视频数量</div>
+                    </div>
+                    <div class="stat-card" style="background:linear-gradient(135deg, #43e97b, #38f9d7);">
+                        <div class="stat-number" id="messageCount">-</div>
+                        <div class="stat-label">留言数量</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <h2>快捷操作</h2>
+                <div class="admin-actions">
+                    <a href="/admin/sliders" class="admin-action-btn" style="background:linear-gradient(135deg, #667eea, #764ba2);">轮播图管理</a>
+                    <a href="/admin/products" class="admin-action-btn" style="background:linear-gradient(135deg, #f093fb, #f5576c);">产品管理</a>
+                    <a href="/admin/videos" class="admin-action-btn" style="background:linear-gradient(135deg, #4facfe, #00f2fe);">视频管理</a>
+                    <a href="/admin/cases" class="admin-action-btn" style="background:linear-gradient(135deg, #ff9a9e, #fad0c4);">案例管理</a>
+                    <a href="/admin/messages" class="admin-action-btn" style="background:linear-gradient(135deg, #43e97b, #38f9d7);">留言管理</a>
+                    <a href="/admin/settings" class="admin-action-btn" style="background:linear-gradient(135deg, #6b7280, #4b5563);">基本设置</a>
+                </div>
+            </div>
+
+            <div class="admin-card">
+                <h2>系统信息</h2>
+                <table class="admin-table">
+                    <tr><td width="200" style="font-weight:500;">公司名称</td><td id="siteName">龙南彩艺装饰材料厂</td></tr>
+                    <tr><td style="font-weight:500;">联系人</td><td id="siteContact">李川 | 13319481565</td></tr>
+                    <tr><td style="font-weight:500;">前台地址</td><td><a href="http://122.51.84.170:8080" target="_blank" style="color:var(--primary);">http://122.51.84.170:8080</a></td></tr>
+                    <tr><td style="font-weight:500;">后台地址</td><td><a href="/admin/login" style="color:var(--primary);">/admin/login</a></td></tr>
+                </table>
+            </div>
+
+            <div class="admin-card">
+                <h2>使用提示</h2>
+                <table class="admin-table">
+                    <tr><td width="30">🎠</td><td><b>轮播图</b> — 上传首页轮播大图，建议尺寸 1920×600 像素</td></tr>
+                    <tr><td>📦</td><td><b>产品管理</b> — 添加/删除产品，可上传产品图片</td></tr>
+                    <tr><td>🎬</td><td><b>视频管理</b> — 上传企业宣传视频（MP4格式，最大100MB）</td></tr>
+                    <tr><td>🏗️</td><td><b>案例管理</b> — 添加工案例展示</td></tr>
+                    <tr><td>⚙️</td><td><b>基本设置</b> — 修改公司名称、联系方式、Logo</td></tr>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script>
+    const TOKEN = localStorage.getItem('admin_token');
+
+    async function loadStats() {
+        try {
+            const [sliders, products, videos, messages, settings] = await Promise.all([
+                fetch('/api/sliders').then(r => r.json()),
+                fetch('/api/products').then(r => r.json()),
+                fetch('/api/videos').then(r => r.json()),
+                fetch('/api/messages', { headers: { 'x-admin-token': TOKEN, 'x-requested-with': 'admin' } }).then(r => r.json()),
+                fetch('/api/settings').then(r => r.json())
+            ]);
+
+            document.getElementById('sliderCount').textContent = Array.isArray(sliders) ? sliders.length : 0;
+            document.getElementById('productCount').textContent = Array.isArray(products) ? products.length : 0;
+            document.getElementById('videoCount').textContent = Array.isArray(videos) ? videos.length : 0;
+            document.getElementById('messageCount').textContent = Array.isArray(messages) ? messages.length : 0;
+
+            if (settings.companyName) document.getElementById('siteName').textContent = settings.companyName;
+            if (settings.contactName && settings.contactPhone) {
+                document.getElementById('siteContact').textContent = `${settings.contactName} | ${settings.contactPhone}`;
+            }
+        } catch (err) {
+            console.error('加载失败', err);
+        }
+    }
+
+    loadStats();
+    </script>
+</body>
+</html>

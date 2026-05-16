@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent 技术交流 - AI Agent 技术学习与交流平台</title>
+    <meta name="description" content="Agent 技术交流 - 专注于AI Agent（智能体）技术的知识分享平台，提供LangChain、AutoGen、CrewAI等框架教程与实战案例。">
+    <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+<!-- LED 滚动条 - 顶部 -->
+<div class="led-ticker">
+    <div class="led-ticker-track">本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照&nbsp;&nbsp;&nbsp;✦&nbsp;&nbsp;&nbsp;</div>
+</div>
+
+<!-- 顶部联系栏 -->
+<div class="top-bar">
+    <div class="container">
+        <span class="top-phone">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span class="contact-phone">Agent知识分享</span> · <span class="contact-name">探索 · 分享 · 成长</span>
+        </span>
+        <span class="top-tagline">探索 AI Agent 无限可能 · 知识共享</span>
+    </div>
+</div>
+
+<!-- 导航栏 -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="#home" class="logo">
+            <img src="" alt="Agent知识分享" class="logo-img" onerror="this.style.display='none'" style="display:none;">
+            <div class="logo-text-group">
+                <span class="logo-main" id="logoText">Agent知识分享</span>
+                <span class="logo-sub" id="logoSub">Agent 技术交流</span>
+            </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">首页</a></li>
+            <li><a href="#products">学习资源</a></li>
+            <li><a href="#cases">实践案例</a></li>
+            <li><a href="#about">关于</a></li>
+            <li><a href="#contact">加入社区</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- 轮播 -->
+<section class="hero" id="home">
+    <div class="hero-slider" id="heroSlider">
+        <div class="slide active" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
+            <div class="hero-content">
+                <h1>探索 AI Agent 的无限可能</h1>
+                <p>从入门到精通，系统学习 Agent 开发技术与最佳实践</p>
+                <a href="#products" class="btn-primary">
+                    开始学习
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="slider-dots" id="sliderDots"></div>
+</section>
+
+<!-- 服务 -->
+<section class="services" id="services">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>学习路径</h2>
+            <p>系统化掌握 AI Agent 开发技能</p>
+        </div>
+        <div class="service-grid">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>框架教程</h3>
+                <p>LangChain、AutoGen、CrewAI 等主流 Agent 框架的入门到精通系列教程</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3>实战项目</h3>
+                <p>从智能客服到数据分析Agent，手把手带你完成真实项目开发</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <h3>核心技术</h3>
+                <p>深入解析RAG、Function Calling、多Agent协作、工具调用等关键技术</p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3>社区交流</h3>
+                <p>加入Agent开发者社区，分享经验、交流问题、共同进步</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 产品 -->
+<section class="products" id="products">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>学习资源</h2>
+            <p>精选教程与实战项目</p>
+        </div>
+        <div class="product-grid" id="productList">
+            <div class="loading-state"><div class="spinner"></div><p>加载资源中...</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 实践案例 -->
+<section class="cases" id="cases">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>实践案例</h2>
+            <p>真实项目 · 经验分享</p>
+        </div>
+        <div class="cases-masonry" id="caseList">
+            <div class="loading-state"><div class="spinner"></div><p>加载案例中...</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 视频教程 -->
+<section class="videos" id="videos">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>视频教程</h2>
+            <p>精选视频课程 · 直观学习</p>
+        </div>
+        <div class="video-showcase" id="videoList">
+            <div class="loading-state"><div class="spinner"></div><p>加载视频中...</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- 关于我们 -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <h2 id="aboutTitle">关于 Agent 技术交流</h2>
+                <p id="aboutDesc1">Agent 技术交流是一个专注于 AI Agent（智能体）技术的学习与交流平台。我们致力于分享最新的 Agent 框架、开发实践、行业应用案例，帮助开发者快速掌握 Agent 开发技能。</p>
+                <p id="aboutDesc2">无论你是 AI 初学者还是资深开发者，这里都有适合你的内容。从 LangChain、AutoGen、CrewAI 等主流框架，到 RAG、多 Agent 协作、工具调用等核心技术，我们帮你系统化学习和实践。</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-num" id="statYears">100+</span>
+                        <span class="stat-label">优质文章</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="statProjects">500+</span>
+                        <span class="stat-label">社区成员</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="statCustomers">50+</span>
+                        <span class="stat-label">开源项目</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image-wrapper fade-in">
+                <div class="about-image-placeholder">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#B8860B" stroke-width="1.5">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        <circle cx="12" cy="12" r="3" fill="rgba(184,134,11,0.15)"/>
+                    </svg>
+                    <p style="font-size:13px;margin-top:8px;">AI Agent · 技术交流</p>
+                    <p style="font-size:11px;margin-top:4px;color:#B2BEC3;">LangChain · AutoGen · CrewAI · LangGraph</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 联系我们 -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title fade-in">
+            <h2>加入社区</h2>
+            <p>一起探索 AI Agent 的无限可能</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DAA520" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <h4>平台</h4>
+                        <p id="contactName">Agent 技术交流</p>
+                    </div>
+                </div>
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DAA520" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <h4>专注领域</h4>
+                        <p id="contactAddr">AI Agent · 知识共享</p>
+                    </div>
+                </div>
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DAA520" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <h4>更新频率</h4>
+                        <p>每周新内容</p>
+                    </div>
+                </div>
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DAA520" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div class="contact-text">
+                        <h4>社区</h4>
+                        <p>开发者交流</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <h3>加入社区</h3>
+                <p style="color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:20px;">有任何问题或想法？欢迎留言交流</p>
+                <form id="messageForm">
+                    <input type="text" name="name" placeholder="您的昵称" required>
+                    <input type="text" name="phone" placeholder="联系方式（微信/邮箱）">
+                    <textarea name="message" rows="4" placeholder="想了解的内容或建议..." required></textarea>
+                    <button type="submit" class="btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        提交留言
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-text">
+                    <h4 id="footerCompanyName">Agent知识分享</h4>
+                    <p id="footerDesc">专注于 AI Agent 技术的学习与交流平台。分享框架教程、实战经验、行业应用，帮助开发者掌握 Agent 开发技能。</p>
+                </div>
+            </div>
+            <div>
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#products">学习资源</a></li>
+                    <li><a href="#cases">实践案例</a></li>
+                    <li><a href="#about">关于</a></li>
+                    <li><a href="#contact">加入社区</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>联系方式</h4>
+                <div class="footer-contact-list">
+                    <p>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span id="footerContactName">钟欣</span>
+                    </p>
+                    <p>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <span>每周更新</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footerYear">2024</span> <span id="footerCompany">Agent知识分享</span> 本人纯编程小白 只是技术小白 本网站只用作个人agent学习测试 谢谢 如有不好的地方 多多关照</p>
+            <p style="margin-top:10px;font-size:12px;"><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:#888;text-decoration:none;">赣ICP备2026009729号-1</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- 详情弹窗 -->
+<div class="modal-overlay" id="detailModal">
+    <div class="modal-box">
+        <div class="modal-header">
+            <h3 id="modalTitle">标题</h3>
+            <button class="modal-close-btn" onclick="closeDetail()" aria-label="关闭">✕</button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-actions">
+            <button class="btn-outline" onclick="closeDetail()" style="padding:8px 24px;font-size:13px;">关闭</button>
+        </div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/ai-features.js"></script>
+<script>
+// ===== 加载网站配置 =====
+async function loadSettings() {
+    try {
+        const res = await fetch('/api/settings');
+        const s = await res.json();
+
+        if (s.companyName) {
+            document.getElementById('logoText').textContent = s.companyName;
+            document.getElementById('footerCompany').textContent = s.companyName;
+            document.getElementById('footerCompanyName').textContent = s.companyName;
+        }
+        if (s.contactName) {
+            document.querySelectorAll('.contact-name').forEach(el => el.textContent = s.contactName);
+            const el = document.getElementById('contactName');
+            if (el) el.textContent = s.contactName;
+            const fc = document.getElementById('footerContactName');
+            if (fc) fc.textContent = s.contactName;
+        }
+        if (s.contactPhone) {
+            document.querySelectorAll('.contact-phone').forEach(el => el.textContent = s.contactPhone);
+            const el = document.getElementById('contactPhone');
+            if (el) el.textContent = s.contactPhone;
+            const fp = document.getElementById('footerPhone');
+            if (fp) fp.textContent = s.contactPhone;
+        }
+        if (s.address) {
+            const el = document.getElementById('contactAddr');
+            if (el) el.textContent = s.address;
+            const fa = document.getElementById('footerAddr');
+            if (fa) fa.textContent = s.address;
+        }
+        if (s.aboutTitle) document.getElementById('aboutTitle').textContent = s.aboutTitle;
+        if (s.aboutDesc1) document.getElementById('aboutDesc1').textContent = s.aboutDesc1;
+        if (s.aboutDesc2) document.getElementById('aboutDesc2').textContent = s.aboutDesc2;
+        if (s.statsYears) document.getElementById('statYears').textContent = s.statsYears;
+        if (s.statsProjects) document.getElementById('statProjects').textContent = s.statsProjects;
+        if (s.statsCustomers) {
+            const el = document.getElementById('statCustomers');
+            if (el) el.textContent = s.statsCustomers;
+        }
+    } catch (err) {
+        console.log('加载配置失败', err);
+    }
+}
+
+// ===== 加载轮播 =====
+async function loadSliders() {
+    try {
+        const res = await fetch('/api/sliders');
+        const sliders = await res.json();
+        const container = document.getElementById('heroSlider');
+        const dotsContainer = document.getElementById('sliderDots');
+
+        if (sliders.length === 0) return;
+
+        container.innerHTML = sliders.map((s, i) => `
+            <div class="slide ${i === 0 ? 'active' : ''}"
+                 style="background: ${s.image ? `url(${s.image}) center/cover` : 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)'};">
+                <div class="hero-content">
+                    <h1>${s.title}</h1>
+                    ${s.subtitle ? `<p>${s.subtitle}</p>` : ''}
+                    <a href="${s.link || '#products'}" class="btn-primary">
+                        查看详情
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        `).join('');
+
+        dotsContainer.innerHTML = sliders.map((_, i) => `<span class="${i === 0 ? 'active' : ''}"></span>`).join('');
+        initSlider();
+    } catch (err) {
+        console.log('加载轮播图失败', err);
+    }
+}
+
+// ===== 加载产品 =====
+async function loadProducts() {
+    try {
+        const res = await fetch('/api/products');
+        const products = await res.json();
+        const container = document.getElementById('productList');
+
+        if (!products || products.length === 0) {
+            container.innerHTML = '<div class="empty-state" style="grid-column:1/-1;">暂无资源，敬请期待</div>';
+            return;
+        }
+
+        container.innerHTML = products.map(p => `
+            <div class="product-card fade-in" onclick="openDetail('${escapeHtml(p.name)}', '${escapeHtml(p.description || '暂无详细描述')}【价格: ${escapeHtml(p.price || '免费')}】', '${escapeHtml(p.category || '学习资源')}')">
+                <div class="product-image">
+                    ${p.image
+                        ? `<img src="${p.image}" alt="${p.name}" loading="lazy">`
+                        : `<span class="product-image-icon">📚</span>`
+                    }
+                    ${p.category ? `<span class="product-badge">${p.category}</span>` : ''}
+                </div>
+                <div class="product-info">
+                    <h3>${p.name}</h3>
+                    ${p.description ? `<p>${p.description}</p>` : ''}
+                    <div class="product-footer">
+                        ${p.price ? `<span class="product-price">${p.price}</span>` : '<span></span>'}
+                        <span class="product-category">${p.category || '学习资源'}</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch (err) {
+        document.getElementById('productList').innerHTML = '<div class="empty-state" style="grid-column:1/-1;">加载资源失败，请刷新重试</div>';
+    }
+}
+
+// ===== 加载案例 =====
+async function loadCases() {
+    try {
+        const res = await fetch('/api/cases');
+        const cases = await res.json();
+        const container = document.getElementById('caseList');
+
+        if (!cases || cases.length === 0) {
+            container.innerHTML = '<div class="empty-state">暂无案例，敬请期待</div>';
+            return;
+        }
+
+        container.innerHTML = cases.map((c, i) => `
+            <div class="case-card" style="animation-delay: ${i * 0.1}s" onclick="openDetail('${escapeHtml(c.title)}', '${escapeHtml(c.description || '暂无详细描述')}', '${escapeHtml(c.category || '实践案例')}')">
+                <div class="case-img-wrap">
+                    ${c.image
+                        ? `<img src="${c.image}" alt="${c.title}" loading="lazy">`
+                        : '<div class="case-no-img">🤖</div>'
+                    }
+                    <span class="case-tag">${c.category || '实践案例'}</span>
+                </div>
+                <div class="case-card-body">
+                    <h3 class="case-card-title">${c.title}</h3>
+                    ${c.description ? `<p class="case-card-desc">${c.description}</p>` : ''}
+                    <div class="case-card-footer">
+                        <span>💡 学习</span>
+                        <span>🔧 实践</span>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    } catch (err) {
+        document.getElementById('caseList').innerHTML = '<div class="empty-state">加载案例失败，请刷新重试</div>';
+    }
+}
+
+// ===== 加载视频 =====
+async function loadVideos() {
+    try {
+        const res = await fetch('/api/videos');
+        const videos = await res.json();
+        const container = document.getElementById('videoList');
+
+        if (!videos || videos.length === 0) {
+            container.innerHTML = '<div class="empty-state">暂无视频教程，敬请期待</div>';
+            return;
+        }
+
+        container.innerHTML = videos.map(v => `
+            <div class="video-item">
+                ${v.video
+                    ? `<video src="${v.video}" controls preload="metadata"></video>`
+                    : '<div style="aspect-ratio:16/9;background:#f0f0f0;display:flex;align-items:center;justify-content:center;font-size:48px;color:#ccc;">🎬</div>'
+                }
+                <div class="video-info">
+                    <h4>${v.title}</h4>
+                    ${v.description ? `<p>${v.description}</p>` : ''}
+                </div>
+            </div>
+        `).join('');
+    } catch (err) {
+        document.getElementById('videoList').innerHTML = '<div class="empty-state">加载视频失败，请刷新重试</div>';
+    }
+}
+
+// ===== 详情弹窗
+function openDetail(title, desc, category) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalBody').innerHTML = (category ? '<span class="modal-category">' + category + '</span>' : '') + '<p>' + desc.replace(/\n/g, '<br>') + '</p>';
+    document.getElementById('detailModal').classList.add('show');
+}
+function closeDetail() {
+    document.getElementById('detailModal').classList.remove('show');
+}
+function escapeHtml(str) {
+    if (!str) return '';
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+document.getElementById('detailModal')?.addEventListener('click', function(e) {
+    if (e.target === this) closeDetail();
+});
+
+// ===== 轮播控制 =====
+let currentSlide = 0;
+let sliderInterval;
+
+function initSlider() {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.slider-dots span');
+    if (slides.length <= 1) return;
+
+    function goTo(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function next() { goTo((currentSlide + 1) % slides.length); }
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    sliderInterval = setInterval(next, 5000);
+}
+
+// ===== 留言表单 =====
+document.getElementById('messageForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = '提交中...';
+
+    try {
+        const res = await fetch('/api/messages', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                name: e.target.name.value,
+                phone: e.target.phone.value,
+                message: e.target.message.value
+            })
+        });
+        const data = await res.json();
+        if (res.ok) {
+            showToast('留言提交成功，我们会尽快联系您！', 'success');
+            e.target.reset();
+        } else {
+            showToast(data.error || '提交失败，请重试', 'error');
+        }
+    } catch (err) {
+        showToast('网络错误，请稍后重试', 'error');
+    } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> 提交留言';
+    }
+});
+
+// ===== 滚动动画 =====
+function initScrollAnimations() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+// Toast 提示
+function showToast(msg, type = 'info') {
+    const container = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = msg;
+    container.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('show'));
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+}
+
+// ===== 汉堡菜单 =====
+document.getElementById('hamburger')?.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('active');
+});
+
+// ===== 初始化 =====
+loadSettings();
+loadSliders();
+loadProducts();
+loadCases();
+loadVideos();
+initScrollAnimations();
+</script>
+</body>
+</html>

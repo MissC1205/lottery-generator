@@ -1,0 +1,175 @@
+{
+  "settings": {
+    "companyName": "Agent 技术交流",
+    "contactName": "探索 · 分享 · 成长",
+    "contactPhone": "Agent知识分享",
+    "address": "AI Agent 技术学习社区",
+    "logo": "",
+    "aboutTitle": "关于 Agent 技术交流",
+    "aboutDesc1": "Agent 技术交流是一个专注于 AI Agent（智能体）技术的学习与交流平台。我们致力于分享最新的 Agent 框架、开发实践、行业应用案例，帮助开发者快速掌握 Agent 开发技能。",
+    "aboutDesc2": "无论你是 AI 初学者还是资深开发者，这里都有适合你的内容。从 LangChain、AutoGen、CrewAI 等主流框架，到 RAG、多 Agent 协作、工具调用等核心技术，我们帮你系统化学习和实践。",
+    "statsYears": "100+",
+    "statsProjects": "500+",
+    "statsCustomers": "50+"
+  },
+  "sliders": [
+    {
+      "id": 1,
+      "title": "探索 AI Agent 的无限可能",
+      "subtitle": "从入门到精通，系统学习 Agent 开发技术与最佳实践",
+      "link": "#products",
+      "image": "",
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "主流框架实战教程",
+      "subtitle": "LangChain · AutoGen · CrewAI · LangGraph 全面覆盖",
+      "link": "#products",
+      "image": "",
+      "active": false
+    },
+    {
+      "id": 3,
+      "title": "加入 Agent 开发者社区",
+      "subtitle": "与数百名开发者一起交流成长，共同探索 Agent 技术前沿",
+      "link": "#contact",
+      "image": "",
+      "active": false
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "LangChain 入门到精通",
+      "description": "全面掌握 LangChain 框架，从基础概念到高级应用，涵盖 Chain、Agent、Memory、Tool 等核心模块的详细讲解与实战演练",
+      "price": "免费",
+      "category": "框架教程",
+      "image": ""
+    },
+    {
+      "id": 2,
+      "name": "AutoGen 多 Agent 开发实战",
+      "description": "微软 AutoGen 框架深度教程，学习构建多 Agent 协作系统，实现复杂任务的自动分解与协同处理",
+      "price": "免费",
+      "category": "框架教程",
+      "image": ""
+    },
+    {
+      "id": 3,
+      "name": "CrewAI 角色协作快速上手",
+      "description": "CrewAI 框架入门到实践，通过角色定义与任务编排，快速构建高效的 AI Agent 协作工作流",
+      "price": "免费",
+      "category": "框架教程",
+      "image": ""
+    },
+    {
+      "id": 4,
+      "name": "LangGraph 复杂工作流构建",
+      "description": "深入学习 LangGraph 有向图状态管理，构建可控制的复杂 AI Agent 工作流，掌握循环、分支、并行等高级模式",
+      "price": "免费",
+      "category": "框架教程",
+      "image": ""
+    },
+    {
+      "id": 5,
+      "name": "RAG 检索增强生成实战",
+      "description": "从零构建 RAG 系统，学习文档分块、向量索引、检索策略、重排序等核心技术，打造企业级知识问答系统",
+      "price": "免费",
+      "category": "核心技术",
+      "image": ""
+    },
+    {
+      "id": 6,
+      "name": "Function Calling 与工具调用",
+      "description": "深入理解 LLM Function Calling 机制，学习如何让 Agent 调用外部 API、数据库和工具，扩展 AI 能力边界",
+      "price": "免费",
+      "category": "核心技术",
+      "image": ""
+    },
+    {
+      "id": 7,
+      "name": "多 Agent 协作系统设计",
+      "description": "掌握多 Agent 架构设计模式，包括 Supervisor、Orchestrator、Debate、Tool Sharing 等协作模式与最佳实践",
+      "price": "免费",
+      "category": "核心技术",
+      "image": ""
+    },
+    {
+      "id": 8,
+      "name": "MCP 协议与 Agent 互联",
+      "description": "学习 Model Context Protocol 协议，掌握 Agent 间通信与工具共享标准，构建可互操作的 Agent 生态系统",
+      "price": "免费",
+      "category": "进阶技术",
+      "image": ""
+    },
+    {
+      "id": 9,
+      "name": "AI Agent 安全架构指南",
+      "description": "系统学习 Agent 安全设计，涵盖提示注入防护、权限控制、数据隔离、Human-in-the-Loop 等安全最佳实践",
+      "price": "免费",
+      "category": "进阶技术",
+      "image": ""
+    }
+  ],
+  "cases": [
+    {
+      "id": 1,
+      "title": "Otter AI — 智能客服 Agent 处理50%入站请求",
+      "description": "采用 Agentic 架构（Function Calling + Runbooks + RAG），自主处理半数客服请求。使用 LLM-as-Judge 评估框架，构建了完整的对话审查工具链。",
+      "image": "",
+      "category": "智能客服"
+    },
+    {
+      "id": 2,
+      "title": "Doctolib Alfred — 医疗健康多 Agent 系统",
+      "description": "使用 LangGraph 构建有向图多 Agent 架构，多个专门化 AI Agent 协同工作。Human-in-the-Loop 确保敏感操作由用户确认执行。",
+      "image": "",
+      "category": "医疗健康"
+    },
+    {
+      "id": 3,
+      "title": "ShareQA — 企业级多 Agent 客服平台",
+      "description": "多代理架构将复杂任务拆解为语意分析、知识检索、NLG 等子任务。云地协同部署，仅需消费级 GPU，支持中/英/日/越多语。",
+      "image": "",
+      "category": "企业服务"
+    },
+    {
+      "id": 4,
+      "title": "Socure — 6 专家 Agent 身份验证系统",
+      "description": "LangGraph 构建 6 个专门化 Agent（DevHub、知识库、BI、CRM、故障排查、法务），实现 50%+ 常规工单自动化，响应速度提升 70%。",
+      "image": "",
+      "category": "金融科技"
+    },
+    {
+      "id": 5,
+      "title": "NewDay NewAssist — RAG 客服坐席辅助",
+      "description": "RAG + 客服坐席辅助系统，从 200 篇知识文章实时检索，回答时间从 90 秒降至 4 秒，准确率超 90%，月运行成本低于 $400。",
+      "image": "",
+      "category": "金融服务"
+    },
+    {
+      "id": 6,
+      "title": "亚信科技 + 天津联通 — 114 智能查号系统",
+      "description": "中国首个 AI 大模型 + Agent 114 查号系统，多 Agent 协作 + 通义千问大模型，筛选率超 80%，已落地 20+ 垂直行业。",
+      "image": "",
+      "category": "通信行业"
+    },
+    {
+      "id": 7,
+      "title": "momo + 微软 — 零售业 AI 购物顾问",
+      "description": "Azure OpenAI + RAG 构建智能客服，回答正确率稳定超 90%，使用人次突破 330 万。规划引入情绪识别与 MCP 协议进化至 AI 购物顾问。",
+      "image": "",
+      "category": "零售电商"
+    },
+    {
+      "id": 8,
+      "title": "智能客服 Triage Agent — 开源获奖项目",
+      "description": "Hugging Face Agents MCP Hackathon 获奖项目，LlamaIndex + Claude + Gradio 构建，支持多知识库智能路由与元数据感知检索。",
+      "image": "",
+      "category": "开源项目"
+    }
+  ],
+  "videos": [],
+  "messages": []
+}
