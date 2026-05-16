@@ -1,0 +1,5 @@
+node_modules/
+server/node_modules/
+.git/
+*.tar.gz
+.DS_Store
